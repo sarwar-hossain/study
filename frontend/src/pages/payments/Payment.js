@@ -45,8 +45,8 @@ function Payment() {
         setIsProcessing(true);
 
         const options = {
-            key: "rzp_test_ay5uc61Heeto3C",
-            key_secret: "gtAPfJspaHIpNh0VPxkSAHex",
+            key: "Your key",
+            key_secret: "Your key_secret",
             amount: amount * 100,
             currency: "INR",
             name: "Razorpay",
