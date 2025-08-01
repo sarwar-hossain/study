@@ -1,0 +1,276 @@
+/* AdminNavbar.css */
+
+/* Base Styles */
+:root {
+    --sidebar-width: 250px;
+    --header-height: 60px;
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-color: #495057;
+    --sidebar-bg: #2c3e50;
+    --nav-link-hover: rgba(255, 255, 255, 0.1);
+    --nav-link-active: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+/* Admin Container */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--light-gray);
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+    width: 260px;
+    background-color: #0bb1f3;
+    color: rgb(27, 26, 26);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-header {
+    margin-left: 20px;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(37, 35, 35);
+}
+
+/* Navigation Links */
+.sidebar-nav {
+    flex: 1;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    color: rgba(26, 23, 23, 0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: var(--nav-link-hover);
+    color: rgb(5, 243, 44);
+}
+
+.nav-link.active {
+    background-color: var(--nav-link-active);
+    color: rgb(7, 235, 102);
+    font-weight: 500;
+}
+
+.nav-link i {
+    margin-right: 0.8rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Content Area Styles */
+.admin-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-header {
+    height: var(--header-height);
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.content-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile span {
+    margin-right: 0.8rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Content Main Area */
+.content-main {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background-color: var(--light-gray);
+}
+
+/* Mobile menu button (hamburger) - shown only when sidebar is closed */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden on desktop by default */
+}
+
+/* Mobile close button in sidebar header */
+.mobile-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .admin-sidebar.open .mobile-close-btn {
+    display: block;
+  }
+  
+  /* Hide the mobile menu button when sidebar is open */
+  .admin-sidebar.open ~ .admin-content .mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .admin-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

@@ -1,0 +1,97 @@
+.payment-history-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-history-container h2 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.payment-table-container {
+    overflow-x: auto;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-table th,
+.payment-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.payment-table th {
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+}
+
+.payment-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.payment-table tr:hover {
+    background-color: #edf2f7;
+}
+
+.payment-id {
+    font-family: monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.no-payments {
+    text-align: center;
+    color: #718096;
+    padding: 2rem;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #e53e3e;
+}
+
+.print-btn {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.8rem 1.5rem;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-btn:hover {
+    background-color: #38a169;
+}
+
+@media print {
+    .print-btn {
+        display: none;
+    }
+
+    .payment-table {
+        box-shadow: none;
+    }
+
+    .payment-table th {
+        background-color: #4299e1 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+    }
+}

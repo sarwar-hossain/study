@@ -1,0 +1,137 @@
+/* AdminHome.css */
+
+/* Base styles */
+.admin-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Error state */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #d32f2f;
+}
+
+.error-text {
+  font-size: 1.5rem;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 5px;
+  border-left: 4px solid #d32f2f;
+}
+
+/* Header styles */
+.admin-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.admin-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Product grid */
+.product-grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product-type-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-type-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #3498db;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* No products message */
+.no-products-message {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.no-products-text {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-page-container {
+    padding: 15px;
+  }
+  
+  .admin-title {
+    font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  }
+  
+  .admin-subtitle {
+    font-size: 1rem;
+  }
+  
+  .product-type-card {
+    padding: 15px;
+  }
+  
+  .product-type-title {
+    font-size: 1.2rem;
+  }
+}

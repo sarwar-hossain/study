@@ -1,0 +1,182 @@
+/* AdminQuizQuestions.css */
+
+.admin-quiz-container {
+   
+    margin: 0rem auto;
+    padding: 0 1rem;
+}
+
+.admin-quiz-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.add-quiz-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto 2rem;
+    padding: 0.8rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    float: right;
+}
+
+.add-quiz-btn:hover {
+    background-color: #2980b9;
+}
+
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.quiz-table th {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+    color: #495057;
+}
+
+.quiz-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: top;
+}
+
+.quiz-table tr:last-child td {
+    border-bottom: none;
+}
+
+.quiz-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.question-cell {
+    width: 60%;
+}
+
+.meta-cell {
+    width: 20%;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.answer-cell {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.action-cell {
+    width: 20%;
+    text-align: right;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.delete-btn, .update-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.update-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #d35400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .quiz-table {
+        display: block;
+    }
+    
+    .quiz-table thead, 
+    .quiz-table tbody, 
+    .quiz-table th, 
+    .quiz-table td, 
+    .quiz-table tr {
+        display: block;
+    }
+    
+    .quiz-table th {
+        display: none;
+    }
+    
+    .quiz-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+    
+    .quiz-table td {
+        border-bottom: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .quiz-table td:before {
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        color: #495057;
+    }
+    
+    .action-buttons {
+        justify-content: center;
+    }
+}
+
+/* Loading state */
+.loading-state {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    border: 1px dashed #bdc3c7;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
