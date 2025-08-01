@@ -2,43 +2,86 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style/Home.css'; // Reuse or modify CSS
 
-import {
-  FaUsers,
-  FaBoxes,
-  FaShoppingBag,
-  FaUserGraduate,
-  FaFilePdf,
-  FaChartLine,
-  FaCog,
-  FaDatabase,
-  FaClipboardCheck,
-  FaBook,
-  FaFileAlt,
-  FaInfoCircle
-} from 'react-icons/fa';
-
 function AdminHome() {
-  const adminOptions = [
-    { id: 1, name: 'Users', icon: <FaUsers size={32} />, color: '#3498db', path: '/admin/users' },
-    { id: 2, name: 'Inventory', icon: <FaBoxes size={32} />, color: '#2ecc71', path: '/admin/inventory' },
-    { id: 3, name: 'Products', icon: <FaShoppingBag size={32} />, color: '#e74c3c', path: '/admin/products' },
-    { id: 4, name: 'Students', icon: <FaUserGraduate size={32} />, color: '#9b59b6', path: '/admin/student' },
-    { id: 5, name: 'PDFs', icon: <FaFilePdf size={32} />, color: '#f39c12', path: '/admin/pdf' },
-    { id: 6, name: 'My Data', icon: <FaDatabase size={32} />, color: '#1abc9c', path: '/admin/mydata' },
-    { id: 7, name: 'Analytics', icon: <FaChartLine size={32} />, color: '#34495e', path: '/admin/analytics' },
-    { id: 8, name: 'Settings', icon: <FaCog size={32} />, color: '#7f8c8d', path: '/admin/settings' },
-    { id: 9, name: 'Books', icon: <FaBook size={32} />, color: '#d35400', path: '/books' },
-    { id: 10, name: 'Notes', icon: <FaFileAlt size={32} />, color: '#27ae60', path: '/notes' },
-    { id: 11, name: 'Reports', icon: <FaClipboardCheck size={32} />, color: '#8e44ad', path: '/admin/reports' },
-    { id: 12, name: 'Help', icon: <FaInfoCircle size={32} />, color: '#c0392b', path: '/admin/help' }
+  const studyOptions = [
+    { 
+      id: 1, 
+      name: 'Syllabus', 
+      icon: <span style={{ fontSize: '32px' }}>📑</span>,
+      path: '/syllabus' 
+    },
+    { 
+      id: 2, 
+      name: 'Class', 
+      icon: <span style={{ fontSize: '32px' }}>👨‍🏫</span>,
+      path: '/class' 
+    },
+    { 
+      id: 3, 
+      name: 'Books', 
+      icon: <span style={{ fontSize: '32px' }}>📚</span>,
+      path: '/books' 
+    },
+    { 
+      id: 4, 
+      name: 'Notes', 
+      icon: <span style={{ fontSize: '32px' }}>🗒️</span>,
+      path: '/notes' 
+    },
+    { 
+      id: 5, 
+      name: 'Formulas', 
+      icon: <span style={{ fontSize: '32px' }}>∫</span>,
+      path: '/formulas' 
+    },
+    { 
+      id: 6, 
+      name: 'Practice Questions', 
+      icon: <span style={{ fontSize: '32px' }}>✍️</span>,
+      path: '/practice-questions' 
+    },
+    { 
+      id: 7, 
+      name: 'Quiz', 
+      icon: <span style={{ fontSize: '32px' }}>✏️</span>,
+      path: '/quiz' 
+    },
+    { 
+      id: 8, 
+      name: 'Prev Year Questions', 
+      icon: <span style={{ fontSize: '32px' }}>🗃️</span>,
+      path: '/previous-year-questions' 
+    },
+    { 
+      id: 9, 
+      name: 'Exam Pattern', 
+      icon: <span style={{ fontSize: '32px' }}>📊</span>,
+      path: '/exam-pattern' 
+    },
+    { 
+      id: 10, 
+      name: 'Exam Notices', 
+      icon: <span style={{ fontSize: '32px' }}>📢</span>,
+      path: '/exam-notices' 
+    },
+    { 
+      id: 11, 
+      name: 'About Exam', 
+      icon: <span style={{ fontSize: '32px' }}>ℹ️</span>,
+      path: '/about-exam' 
+    },
+    { 
+      id: 12, 
+      name: 'Study Plan', 
+      icon: <span style={{ fontSize: '32px' }}>⏳</span>,
+      path: '/rgba(2, 2, 2, 1)lan' 
+    }
   ];
 
   return (
     <div className="admin-home">
-     
-
       <div className="study-grid">
-        {adminOptions.map((option) => (
+        {studyOptions.map((option) => (
           <Link
             to={option.path}
             key={option.id}
