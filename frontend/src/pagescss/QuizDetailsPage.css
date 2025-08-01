@@ -1,0 +1,132 @@
+/* AllSubmissionsPage.css */
+.all-submissions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.all-submissions-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.back-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}
+
+.all-submissions-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.submission-full-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submission-full-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submission-full-item h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.submission-full-item p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.submission-full-item p strong {
+  color: #2c3e50;
+}
+
+.answers-heading {
+  color: #3498db;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.answers-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.answer-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #e74c3c;
+}
+
+.answer-item.correct {
+  border-left-color: #2ecc71;
+}
+
+.answer-item p {
+  margin: 0.3rem 0;
+}
+
+.status-text {
+  font-weight: bold;
+}
+
+.answer-item.correct .status-text {
+  color: #2ecc71;
+}
+
+.answer-item.incorrect .status-text {
+  color: #e74c3c;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 2rem;
+  border: 1px solid #ef9a9a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .all-submissions-container {
+    padding: 1rem;
+  }
+  
+  .submission-full-item {
+    padding: 1rem;
+  }
+}

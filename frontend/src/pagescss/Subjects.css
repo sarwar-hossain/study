@@ -1,0 +1,131 @@
+/* QuizPage.css */
+.subject-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subject-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #c7f6d0;
+  border-radius: 10px;
+}
+
+.subject-header h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.subject-header p {
+  color: #7f8c8d;
+}
+
+.subject-categories-head {
+  margin: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.subject-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.subject-icon {
+  font-size: 28px;
+}
+
+.subject-card-header h2 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.subject-count {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.subject-topics {
+  margin: 15px 0;
+}
+
+.subject-topics h4 {
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic-tag {
+  background-color: #f1f1f1;
+  color: #34495e;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.subject-action {
+  margin-top: auto;
+  padding-top: 15px;
+  color: #3498db;
+  font-weight: 500;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subject-categories {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .subject-card-header {
+    flex-wrap: wrap;
+  }
+  
+  .subject-count {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,123 @@
+/* Navbar.css */
+
+/* Base styles */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Logo styles */
+nav ul li:first-child {
+  flex: 1;
+}
+
+nav ul li:first-child a {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:first-child img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Profile button styles (only when logged in) */
+nav ul li:has(> a[href="/profile"]) a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4a6bff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+nav ul li:has(> a[href="/profile"]) a:hover {
+  background-color: #3a5bef;
+  transform: scale(1.05);
+}
+
+/* Login link styles (only when not logged in) */
+nav ul li:has(> a[href="/login"]) a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  color: #333;
+}
+
+nav ul li:has(> a[href="/login"]) a:hover {
+  color: #4a6bff;
+  background-color: rgba(74, 107, 255, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  nav ul li:first-child img {
+    height: 35px;
+  }
+  
+  nav ul li:has(> a[href="/profile"]) a {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    justify-content: space-between;
+  }
+
+  nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+  
+ nav ul li:first-child img {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+  
+  nav ul li:has(> a[href="/login"]) a {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
