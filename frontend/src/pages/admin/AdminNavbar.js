@@ -15,7 +15,7 @@ const AdminNavbar = () => {
 
   const { phone } = UserProfile();
 
-  if (phone === "9339045904" || phone === "123451") {
+  if (phone === "123452" || phone === "123451" || phone === "123453") {
    
   }else{
      navigate("/")
@@ -106,5 +106,6 @@ const AdminNavbar = () => {
     </div>
   );
 };
+
 
 export default AdminNavbar;
